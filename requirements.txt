@@ -1,0 +1,19 @@
+# Bitcoin Legacy Wallet Scanner Dependencies
+
+# Cryptography (choose one - coincurve is preferred for performance)
+coincurve>=21.0.0                  # Fast secp256k1 operations (recommended)
+# ecdsa>=0.18.0                    # Alternative if coincurve not available
+
+# Configuration and data handling
+PyYAML>=6.0                       # YAML configuration file support
+
+# Terminal UI
+blessed>=1.20.0                   # Modern terminal interface library
+
+# Optional performance improvements
+ujson>=5.7.0                      # Fast JSON processing (optional)
+
+# Development dependencies (optional)
+# pytest>=7.0.0                   # Testing framework
+# black>=23.0.0                    # Code formatting
+# mypy>=1.0.0                     # Type checking

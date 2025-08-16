@@ -1,0 +1,25 @@
+# Bitcoin Legacy Wallet Scanner Configuration
+
+# Batch processing settings
+batch_size: 512                    # Number of addresses to check in one RPC call
+gen_workers: auto                  # Number of key generation workers (auto = CPU count)
+rpc_workers: auto                  # Number of RPC workers (auto = 4)
+queue_max: 100000                  # Maximum queue size for addresses
+
+# Bitcoin Core settings
+bitcoin_cli_path: "bitcoin-cli"    # Path to bitcoin-cli executable
+network: "mainnet"                 # Network: mainnet, testnet, regtest
+rpc_timeout_sec: 120               # RPC timeout in seconds
+
+# Output settings
+output_dir: "./out"                # Output directory for results
+rotate_size_mb: 100                # File rotation size in MB
+
+# Logging
+log_level: "INFO"                  # Log level: DEBUG, INFO, WARN, ERROR
+
+# Performance tuning
+retry_attempts: 3                  # Number of retry attempts for failed RPC calls
+base_delay: 1.0                    # Base delay for exponential backoff (seconds)
+gen_batch_delay: 0.01             # Delay between generation batches (seconds)
+stats_update_interval: 5.0         # Statistics update interval (seconds)
